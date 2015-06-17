@@ -16,8 +16,7 @@ class QuoteBase(models.Model):
     author = models.CharField(_('author'), blank=False, null=False,
                               max_length=255,
                               help_text=_("The author of the quote."))
-    url_source = models.URLField(_('url source'), verify_exists=False,
-                                 blank=True, null=True)
+    url_source = models.URLField(_('url source'), blank=True, null=True)
 
     objects = PublicManager()
 
